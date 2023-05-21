@@ -1,3 +1,4 @@
+import { Container, Heading, Button } from "@chakra-ui/react";
 import { useState } from "react";
 
 function App() {
@@ -7,11 +8,11 @@ function App() {
     setQuestionAnswer('Full Stack developer')
   }
   return (
-    <div>
-	<h1>Question & Answer</h1>
-      <h2>{ questionAnswer }</h2>
-      <button onClick={getAnswer}>Get the Answer</button>
-    </div>
+    <Container align='center'>
+	    <Heading as='h1' my='30px'>Question & Answer</Heading>
+        <Heading fontSize='24px'>{ questionAnswer }</Heading>
+      <Button mt='20px' onClick={getAnswer} bg='teal'>Get the Answer</Button>
+    </Container>
   );
 }
 
